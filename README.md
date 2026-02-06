@@ -1,4 +1,3 @@
-<h2>Long description (GitHub)</h2>
 <p><strong>DC Joo Contact</strong> is a free and lightweight contact form module created specifically for <strong>Joomla 5 and Joomla 6</strong>.<br/> It was built out of a real need: many popular contact form extensions either stopped working correctly or lost full compatibility with newer Joomla versions. This module focuses on one thing only &mdash; <strong>reliable message delivery</strong>, without unnecessary complexity.</p>
 <h3>Why DC Joo Contact?</h3>
 <ul>
