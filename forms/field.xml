@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="field">
+		<fieldset name="basic" label="MOD_DC_JOO_CONTACT_FIELD_FIELDSET">
+			<field name="label" type="text" label="MOD_DC_JOO_CONTACT_FIELD_LABEL_LABEL" required="true" />
+			<field name="type" type="list" label="MOD_DC_JOO_CONTACT_FIELD_TYPE_LABEL" default="input">
+				<option value="input">MOD_DC_JOO_CONTACT_FIELD_TYPE_INPUT</option>
+				<option value="textarea">MOD_DC_JOO_CONTACT_FIELD_TYPE_TEXTAREA</option>
+				<option value="select">MOD_DC_JOO_CONTACT_FIELD_TYPE_SELECT</option>
+				<option value="checkbox">MOD_DC_JOO_CONTACT_FIELD_TYPE_CHECKBOX</option>
+				<option value="radio">MOD_DC_JOO_CONTACT_FIELD_TYPE_RADIO</option>
+			</field>
+
+			<field name="options" type="textarea" label="MOD_DC_JOO_CONTACT_FIELD_OPTIONS_LABEL" rows="4" />
+			<field name="required" type="checkbox" label="MOD_DC_JOO_CONTACT_FIELD_REQUIRED" />
+		</fieldset>
+	</fields>
+</form>

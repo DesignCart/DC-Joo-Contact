@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+	<name>MOD_DC_JOO_CONTACT</name>
+	<author>Design Cart</author>
+	<version>1.0.0</version>
+	<description>MOD_DC_JOO_CONTACT_DESC</description>
+
+	<files>
+		<filename module="mod_dc_joo_contact">mod_dc_joo_contact.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>forms</folder>
+		<folder>assets</folder>
+	</files>
+
+	<languages>
+	  <language tag="pl-PL">language/pl-PL/mod_dc_joo_contact.ini</language>
+	  <language tag="pl-PL">language/pl-PL/mod_dc_joo_contact.sys.ini</language>
+	  <language tag="en-GB">language/en-GB/mod_dc_joo_contact.ini</language>
+	  <language tag="en-GB">language/en-GB/mod_dc_joo_contact.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<!-- Zakładka 1: Treść modułu / przycisk -->
+			<fieldset name="content" label="MOD_DC_JOO_CONTACT_TAB_CONTENT">
+				<field name="module_title" type="text" label="MOD_DC_JOO_CONTACT_FIELD_MODULE_TITLE_LABEL" />
+				<field name="module_desc" type="textarea" label="MOD_DC_JOO_CONTACT_FIELD_MODULE_DESC_LABEL" rows="4" />
+				<field name="submit_text" type="text" label="MOD_DC_JOO_CONTACT_FIELD_SUBMIT_TEXT" />
+				<field name="label_name" type="text" label="MOD_DC_JOO_CONTACT_FIELD_LABEL_NAME" />
+				<field name="label_email" type="text" label="MOD_DC_JOO_CONTACT_FIELD_LABEL_EMAIL" />
+			</fieldset>
+
+			<!-- Zakładka 3: Design (moduł + przycisk otwierający) -->
+			<fieldset name="design" label="MOD_DC_JOO_CONTACT_TAB_DESIGN">
+				<field name="mod_bg_1" type="color" label="MOD_DC_JOO_CONTACT_FIELD_MOD_BG_LABEL" />
+				<field name="mod_bg_2" type="color" label="MOD_DC_JOO_CONTACT_FIELD_MOD_BG_LABEL" />
+				<field name="mod_title_color" type="color" label="MOD_DC_JOO_CONTACT_FIELD_MOD_TITLE_COLOR_LABEL" />
+				<field name="mod_desc_color" type="color" label="MOD_DC_JOO_CONTACT_FIELD_MOD_DESC_COLOR_LABEL" />
+				<field name="mod_title_size" type="number" label="MOD_DC_JOO_CONTACT_FIELD_MOD_TITLE_SIZE_LABEL" />
+				<field name="mod_desc_size" type="number" label="MOD_DC_JOO_CONTACT_FIELD_MOD_DESC_SIZE_LABEL" />
+			</fieldset>
+
+			<!-- Zakładka 5: Design form -->
+			<fieldset name="design_form" label="MOD_DC_JOO_CONTACT_TAB_DESIGN_FORM">
+				<field name="label_color" type="color" label="MOD_DC_JOO_CONTACT_FIELD_LABEL_COLOR_LABEL" />
+				<field name="label_size" type="number" label="MOD_DC_JOO_CONTACT_FIELD_LABEL_SIZE_LABEL" />
+				<field name="input_bg" type="color" label="MOD_DC_JOO_CONTACT_FIELD_INPUT_BG_LABEL" />
+				<field name="input_border" type="color" label="MOD_DC_JOO_CONTACT_FIELD_INPUT_BORDER_LABEL" />
+				<field name="input_text_color" type="color" label="MOD_DC_JOO_CONTACT_FIELD_INPUT_TEXT_COLOR_LABEL" />
+				<field name="input_text_size" type="number" label="MOD_DC_JOO_CONTACT_FIELD_INPUT_TEXT_SIZE_LABEL" />
+				<field name="input_radius" type="number" label="MOD_DC_JOO_CONTACT_FIELD_INPUT_RADIUS_LABEL" />
+				<field name="input_padding_y" type="number" label="MOD_DC_JOO_CONTACT_FIELD_INPUT_PADDING_Y_LABEL" />
+				<field name="input_padding_x" type="number" label="MOD_DC_JOO_CONTACT_FIELD_INPUT_PADDING_X_LABEL" />
+				<field name="submit_btn_bg" type="color" label="MOD_DC_JOO_CONTACT_FIELD_SUBMIT_BTN_BG_LABEL" />
+				<field name="submit_btn_bg_hover" type="color" label="MOD_DC_JOO_CONTACT_FIELD_SUBMIT_BTN_BG_HOVER_LABEL" />
+				<field name="submit_btn_color" type="color" label="MOD_DC_JOO_CONTACT_FIELD_SUBMIT_BTN_COLOR_LABEL" />
+				<field name="submit_btn_color_hover" type="color" label="MOD_DC_JOO_CONTACT_FIELD_SUBMIT_BTN_COLOR_HOVER_LABEL" />
+				<field name="submit_btn_size" type="number" label="MOD_DC_JOO_CONTACT_FIELD_SUBMIT_BTN_SIZE_LABEL" />
+			</fieldset>
+			<fieldset name="fields" label="MOD_DC_JOO_CONTACT_FORM">
+				<field name="system_notice" type="note" label="MOD_DC_JOO_CONTACT_SYSTEM_NOTICE_LABEL" description="MOD_DC_JOO_CONTACT_SYSTEM_NOTICE_DESC"/>
+				<field name="fields" type="subform" label="MOD_DC_JOO_CONTACT_FIELDS_LABEL" multiple="true" formsource="modules/mod_dc_joo_contact/forms/field.xml" layout="joomla.form.field.subform.repeatable-table" />
+			</fieldset>
+
+			<fieldset name="mail" label="MOD_DC_JOO_CONTACT_TAB_MAIL">
+				<field name="mail_to" type="email" label="MOD_DC_JOO_CONTACT_FIELD_MAIL_TO_LABEL" required="true" />
+				<field name="mail_subject" type="text" label="MOD_DC_JOO_CONTACT_FIELD_MAIL_SUBJECT_LABEL" />
+				<field name="mail_intro" type="editor" label="MOD_DC_JOO_CONTACT_FIELD_MAIL_INTRO_LABEL" filter="safehtml" buttons="false" />
+				<field name="mail_success" type="text" label="MOD_DC_JOO_CONTACT_FIELD_MAIL_SUCCESS" filter="safehtml" buttons="false" />
+				<field name="mail_error" type="text" label="MOD_DC_JOO_CONTACT_FIELD_MAIL_ERROR" filter="safehtml" buttons="false" />
+			</fieldset>
+
+			<!-- Zakładka: jQuery -->
+			<fieldset name="jquery" label="MOD_DC_JOO_CONTACT_TAB_JQUERY">
+				<field name="load_jquery" type="checkbox" label="MOD_DC_JOO_CONTACT_FIELD_LOAD_JQUERY_LABEL" description="MOD_DC_JOO_CONTACT_FIELD_LOAD_JQUERY_DESC" value="1" class="joomla-switch" />
+			</fieldset>
+		</fields>
+  	</config>
+</extension>

@@ -1,0 +1,109 @@
+.dc-mod-joo_contact{
+		padding: 20px;
+		position:relative;
+}
+
+.dc-joo_contact-form__field,
+.dc-mod-joo_contact__content{
+		margin-bottom: 20px;
+}
+
+.dc-joo_contact-modal__btn-submit{
+		border:none;
+		transition: all 0.4s linear;
+		font-weight: 700;
+}
+
+.dc-joo_contact-message{
+		font-size: 22px;
+		text-align: center;
+		padding: 20px;
+}
+
+.dc-joo_contact-message-close{
+		width: 50px;
+		height:50px;
+		border:none;
+		background: #fff;
+		color:#000;
+		font-size: 26px;
+		position:absolute;
+		right:20px;
+		top:20px;
+		display: flex;
+  	justify-content: center;
+  	align-items: center;
+		border-radius: 50%;
+}
+
+/* MESSAGE ERROR */
+.dc-joo_contact-message-error {
+	  color: #fff;
+	  padding: 12px 16px;
+	  border-radius: 6px;
+		position:absolute;
+		left:0px;
+		right:0px;
+		top:0px;
+		bottom:0px;
+		display: flex;
+  	justify-content: center;
+  	align-items: center;
+	  background: linear-gradient(
+	    270deg,
+	    #b11226,
+	    #e53935,
+	    #b11226
+	  );
+	  background-size: 400% 400%;
+	  animation: dcErrorGradient 4s ease infinite;
+		display:none;
+}
+
+@keyframes dcErrorGradient {
+	  0% {
+	    background-position: 0% 50%;
+	  }
+	  50% {
+	    background-position: 100% 50%;
+	  }
+	  100% {
+	    background-position: 0% 50%;
+	  }
+}
+
+/* MESSAGE SUCCESS */
+.dc-joo_contact-message-success {
+	  color: #fff;
+	  padding: 12px 16px;
+	  border-radius: 6px;
+		position:absolute;
+		left:0px;
+		right:0px;
+		top:0px;
+		bottom:0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	  background: linear-gradient(
+	    270deg,
+	    #1b5e20,
+	    #43a047,
+	    #1b5e20
+	  );
+	  background-size: 400% 400%;
+	  animation: dcSuccessGradient 4s ease infinite;
+		display:none;
+}
+
+@keyframes dcSuccessGradient {
+	  0% {
+	    background-position: 0% 50%;
+	  }
+	  50% {
+	    background-position: 100% 50%;
+	  }
+	  100% {
+	    background-position: 0% 50%;
+	  }
+}
